@@ -14,13 +14,3 @@ cvjs.prototype.Line = function(o)
 		this.ctx.lineTo(o[i][0], o[i][1]);
 	}
 };
-
-//cvjs polygon
-cvjs.prototype.Polygon = function(o)
-{
-	//Draw the lines
-	this.Line(o);
-
-	//Close path
-	this.ctx.closePath();
-};
