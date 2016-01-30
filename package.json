@@ -1,0 +1,17 @@
+{
+  "name": "cvjs",
+  "version": "0.1.0-alpha",
+  "description": "A lightweight Canvas JavaScript library.",
+  "main": "dist/cv.js",
+  "author": "Josemi Juanes <josemijuanes@gmail.com>",
+  "license": "MIT",
+  "dependencies": {  },
+  "devDependencies": {
+    "gulp": "^3.0.9",
+    "gulp-concat": "^2.6.0",
+    "gulp-uglify": "1.4.2",
+    "gulp-rename": "1.2.2",
+    "gulp-header": "1.7.1"
+  },
+  "repository": { "type": "git", "url": "git://github.com/jmjuanes/cv.js.git" }
+}
