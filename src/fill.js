@@ -1,6 +1,9 @@
 //cvjs fill
 cvjs.prototype.Fill = function(opt)
 {
+	//Check for unique color
+	if(typeof opt === 'string'){ this.ctx.fillStyle = opt; }
+	
 	//Check for add the color
 	if(typeof opt.color !== 'undefined'){ this.ctx.fillStyle = opt.color; }
 
