@@ -4,6 +4,7 @@
   "description": "A lightweight Canvas JavaScript library.",
   "main": "dist/cv.js",
   "author": "Josemi Juanes <josemijuanes@gmail.com>",
+  "homepage": "https://github.com/jmjuanes/cv.js",
   "license": "MIT",
   "dependencies": {  },
   "devDependencies": {
