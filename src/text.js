@@ -22,8 +22,17 @@ cvjs.prototype.Text = function(o)
 	//Check the align  center|end|left|right|start
 	if(typeof o.align !== 'undefined'){ this.ctx.textAlign = o.align; }
 
-	//Add the text
-	this.ctx.fillText(o.text, o.x, o.y);
+	//Check for max width
+	if(typeof opt.mwidth !== 'undefined')
+	{
+		//Add the text with maxwidth
+		this.ctx.fillText(o.text, o.x, o.y, o.mwidth);
+	}
+	else
+	{
+		//Add the text
+		this.ctx.fillText(o.text, o.x, o.y);
+	}
 
 	//Reset the global alpha
 	this.ctx.globalAlpha = 1;
