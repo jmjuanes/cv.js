@@ -184,3 +184,79 @@ canvas.Polygon([[50, 50], [50, 100], [100, 100]]);
 //Fill the friangle
 canvas.Fill('#000000');
 ```
+
+### Arc(object)
+
+Draws an arc or curve. The argument must be an object with the following keys:
+
+- `x`: x-position of the arc center.
+- `y`: y-position of the arc center.
+- `radius`: arc radius.
+- `start`: start angle of the arc.
+- `end`: end angle of the arc.
+- `dir`: sets the direction of the arc (optional). `1` indicates clockwise (default), and `-1` indicates counter-clockwise.
+
+```javascript
+//Draw a new arc
+canvas.Arc({ x: 150, y: 150, radius: 100, start: 0, end: 3*Math.PI/2 });
+
+//Arc fill
+canvas.Fill('#abcdef');
+```
+
+### Circle(object)
+
+Draws a full circle defined by:
+
+- `x`: x-position of the circle center.
+- `y`: y-position of the circle center.
+- `radius`: circle radius.
+
+```javascript
+//Draw a circle
+canvas.Circle({ x: 150, y: 150, radius: 100 });
+
+//Fill the circle
+canvas.Fill('#abcdef');
+```
+
+
+### Text(object)
+
+Draws a text on the canvas. The argument of this method must be an object with the following keys:
+
+- `text`: text to be written on the canvas.
+- `color`: text color.
+- `x`: x-position of the text.
+- `y`: y-position of the text.
+- `font`: text font. Default is `Arial`.
+- `size`: text size in pixels. Default is `16px`.
+- `base`: sets the text baseline. Available values: `alphabetic`, `top`, `hanging`, `middle`, `ideographic` or `bottom`. Default is `alphabetic`.
+- `align`: sets the text align. Available values: `center`, `end`, `left`, `right` or `start`. Default is `start`.
+- `mwidth`: sets the maximum allowed width of the text in pixels (optional).
+- `opacity`: sets the transparency of the text.
+
+```javascript
+//Draw Hello World
+canvas.Text({ text: 'Hello World', size: 14, x: 50, y: 50, color: '#588bfe' });
+```
+
+## Draw on the canvas directly
+
+You can use the `ctx` method provided for draw directly on the canvas using the canvas API (see [http://www.w3schools.com/tags/ref_canvas.asp](http://www.w3schools.com/tags/ref_canvas.asp) for get more info). This allows you to use `moveTo()`, `quadraticCurveTo()`, `bezierCurveTo()`, and more!
+
+```javascript
+//Initialize the canvas
+var canvas = new cvjs({ id: 'my-canvas', width: 500, height: 500 });
+
+//Move to our new point
+canvas.ctx.moveTo(50,50);
+
+//Draw a quadratic curve
+canvas.ctx.quadraticCurveTo(50,200,300,50);
+```
+
+
+## Contribute
+
+Pull requests are always welcome :)
