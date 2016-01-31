@@ -1,6 +1,9 @@
 //cvjs Stroke
 cvjs.prototype.Stroke = function(opt)
 {
+	//Check the stroke color
+	if(typeof opt === 'string'){ this.ctx.strokeStyle = opt; }
+	
 	//Check the stroke width
 	if(typeof opt.width !== 'undefined'){ this.ctx.lineWidth = opt.width; }
 
