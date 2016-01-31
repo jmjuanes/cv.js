@@ -16,6 +16,7 @@ canvas.Arc({ x: 150, y: 150, radius: 100, start: 0, end: 3*Math.PI/2 });
 canvas.Fill({ color: '#000000', opacity: 0.5 });
 ```
 
+
 ## Download
 
 Get the library downloading the latest release or using NPM:
@@ -192,8 +193,8 @@ Draws an arc or curve. The argument must be an object with the following keys:
 - `x`: x-position of the arc center.
 - `y`: y-position of the arc center.
 - `radius`: arc radius.
-- `start`: start angle of the arc.
-- `end`: end angle of the arc.
+- `start`: start angle of the arc, in radians.
+- `end`: end angle of the arc, in radians.
 - `dir`: sets the direction of the arc (optional). `1` indicates clockwise (default), and `-1` indicates counter-clockwise.
 
 ```javascript
@@ -220,7 +221,6 @@ canvas.Circle({ x: 150, y: 150, radius: 100 });
 canvas.Fill('#abcdef');
 ```
 
-
 ### Text(object)
 
 Draws a text on the canvas. The argument of this method must be an object with the following keys:
@@ -240,6 +240,24 @@ Draws a text on the canvas. The argument of this method must be an object with t
 //Draw Hello World
 canvas.Text({ text: 'Hello World', size: 14, x: 50, y: 50, color: '#588bfe' });
 ```
+
+### Image(object)
+
+Draws an image on the canvas. You must provide the next information:
+
+- `img`: sets the image for draw.
+- `x`: x-position of the image.
+- `y`: y-position of the image.
+- `width`: image width (optional, default is the image original width).
+- `height`: image height (optiona, default is the image original height).
+- `rotate`: rotation angle for the image, in radians (optional).
+- `opacity`: sets the transparency of the image.
+
+```javascript
+//Draw an image
+canvas.Image({ img: imgID, x: 50, y: 50 });
+```
+
 
 ## Draw on the canvas directly
 
