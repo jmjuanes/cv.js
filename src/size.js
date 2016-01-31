@@ -25,7 +25,7 @@ cvjs.prototype.Height = function(h)
 	}
 	else
 	{
-		//Save the element heigth
+		//Save the element height
 		this.id.height = h;
 	}
 };
