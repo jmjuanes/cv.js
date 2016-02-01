@@ -1,6 +1,9 @@
 //cvjs clear the canvas
 cvjs.prototype.Clear = function(opt)
 {
+	//Check for null opt
+	if(typeof opt === 'undefined'){ var opt = {}; }
+	
 	//Check the x point
 	var x = (typeof opt.x === 'undefined')? 0 : opt.x;
 
