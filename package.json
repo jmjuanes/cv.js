@@ -1,6 +1,6 @@
 {
   "name": "cvjs",
-  "version": "0.1.0-alpha",
+  "version": "0.1.0-alpha.1",
   "description": "A lightweight Canvas JavaScript library.",
   "main": "dist/cv.js",
   "author": "Josemi Juanes <josemijuanes@gmail.com>",
