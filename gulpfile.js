@@ -56,4 +56,4 @@ var banner = ['/**',
   });
 
 //Execute the tasks
-gulp.task('default', ['concat']);
+gulp.task('default', ['concat', 'minimize']);
