@@ -23,7 +23,7 @@ cvjs.prototype.Text = function(o)
 	if(typeof o.align !== 'undefined'){ this.ctx.textAlign = o.align; }
 
 	//Check for max width
-	if(typeof opt.mwidth !== 'undefined')
+	if(typeof o.mwidth !== 'undefined')
 	{
 		//Add the text with maxwidth
 		this.ctx.fillText(o.text, o.x, o.y, o.mwidth);
