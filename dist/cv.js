@@ -1,6 +1,6 @@
 /**
  * cvjs - A lightweight Canvas JavaScript library.
- * @version v0.1.0-alpha
+ * @version v0.1.0-alpha.2
  * @link https://github.com/jmjuanes/cv.js
  * @license MIT
  */
@@ -216,7 +216,25 @@ cvjs.prototype.Rect = function(o)
 	this.ctx.closePath();
 };
 
-//cv.js width function
+//cvjs set the size
+cvjs.prototype.Size(w, h)
+{
+	//Check for width
+	if(typeof w !== 'undefined')
+	{
+		//Set the width
+		this.Width(w);
+	}
+	
+	//Check for height
+	if(typeof h !== 'undefined')
+	{
+		//Set the height
+		this.Height(h);
+	}
+};
+
+//cvjs width function
 cvjs.prototype.Width = function(w)
 {
 	//Check for return the width or save it
@@ -292,7 +310,16 @@ cvjs.prototype.Text = function(o)
 	this.ctx.font = size + ' ' + font;
 
 	//Add the text baseline  alphabetic|top|hanging|middle|ideographic|bottom
-	if(typeof o.base !== 'undefined'){ this.ctx.textBaseline = o.base; }
+	if(typeof o.base !== 'undefined')
+	{
+		//Set the user baseline
+		this.ctx.textBaseline = o.base;
+	}
+	else
+	{
+		//Set the default baseline
+		this.ctx.textBaseline = 'top';
+	}
 
 	//Add the font color
 	if(typeof o.color !== 'undefined'){ this.ctx.fillStyle = o.color; }
@@ -301,7 +328,7 @@ cvjs.prototype.Text = function(o)
 	if(typeof o.align !== 'undefined'){ this.ctx.textAlign = o.align; }
 
 	//Check for max width
-	if(typeof opt.mwidth !== 'undefined')
+	if(typeof o.mwidth !== 'undefined')
 	{
 		//Add the text with maxwidth
 		this.ctx.fillText(o.text, o.x, o.y, o.mwidth);
