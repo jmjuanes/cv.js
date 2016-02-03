@@ -1,4 +1,22 @@
-//cv.js width function
+//cvjs set the size
+cvjs.prototype.Size(w, h)
+{
+	//Check for width
+	if(typeof w !== 'undefined')
+	{
+		//Set the width
+		this.Width(w);
+	}
+	
+	//Check for height
+	if(typeof h !== 'undefined')
+	{
+		//Set the height
+		this.Height(h);
+	}
+};
+
+//cvjs width function
 cvjs.prototype.Width = function(w)
 {
 	//Check for return the width or save it
