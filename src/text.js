@@ -14,7 +14,16 @@ cvjs.prototype.Text = function(o)
 	this.ctx.font = size + ' ' + font;
 
 	//Add the text baseline  alphabetic|top|hanging|middle|ideographic|bottom
-	if(typeof o.base !== 'undefined'){ this.ctx.textBaseline = o.base; }
+	if(typeof o.base !== 'undefined')
+	{
+		//Set the user baseline
+		this.ctx.textBaseline = o.base;
+	}
+	else
+	{
+		//Set the default baseline
+		this.ctx.textBaseline = 'top';
+	}
 
 	//Add the font color
 	if(typeof o.color !== 'undefined'){ this.ctx.fillStyle = o.color; }
