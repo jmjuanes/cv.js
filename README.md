@@ -19,10 +19,9 @@ canvas.Fill({ color: '#000000', opacity: 0.5 });
 
 ## Download
 
-Get the library downloading the latest release or using NPM:
-
-- Latest release: [download](https://github.com/jmjuanes/cv.js/releases).
-- **NPM**: [https://www.npmjs.com/package/cvjs](https://www.npmjs.com/package/cvjs).
+- Download the latest release: [download](https://github.com/jmjuanes/cv.js/releases).
+- Using **[NPM](https://www.npmjs.com/package/cvjs)**: `npm install cvjs`.
+- Using **bower**: `bower install cvjs`.
 
 
 ## Usage
