@@ -1,6 +1,6 @@
 /**
  * cvjs - A lightweight Canvas JavaScript library.
- * @version v0.1.0-alpha.3
+ * @version v1.0.0
  * @link https://github.com/jmjuanes/cv.js
  * @license MIT
  */
@@ -165,6 +165,7 @@ cvjs.prototype.Line = function(o)
 		this.ctx.lineTo(o[i][0], o[i][1]);
 	}
 };
+
 
 //cvjs polygon
 cvjs.prototype.Polygon = function(o)
