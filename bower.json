@@ -1,0 +1,10 @@
+{
+	"name": "cvjs",
+	"description": "A lightweight Canvas JavaScript library.",
+	"main": "dist/cv.js",
+	"ignore": [ "**/.*", "node_modules", "bower_components" ],
+	"dependencies": {},
+	"license": "MIT",
+	"authors": [ "Josemi Juanes <josemijuanes@gmail.com>" ],
+	"keywords": [ "canvas", "library", "light" ]
+}
